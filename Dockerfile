@@ -1,8 +1,6 @@
 FROM pufferpanel/pufferpanel:latest
 
-# Expose panel + daemon ports
-EXPOSE 8081 5657
+EXPOSE 8080
+EXPOSE 5657
 
-
-# Start PufferPanel
-CMD ["pufferpanel", "run"]
+CMD sh -c "pufferpanel user add --name admin --email admin@example.com --password admin123 --admin || true && pufferpanel run"
