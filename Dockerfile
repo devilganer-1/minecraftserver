@@ -1,7 +1,10 @@
 FROM pufferpanel/pufferpanel:latest
 
-# Expose the ports PufferPanel uses
+# Expose panel + daemon ports
 EXPOSE 8081 5657
 
-# PufferPanel needs a volume to save data
+# Persistent storage
 VOLUME /var/lib/pufferpanel
+
+# Start PufferPanel
+CMD ["pufferpanel", "run"]
