@@ -1,4 +1,4 @@
-FROM pufferpanel/pufferpanel:latest
+FROM pufferpanel/pufferpanel:2.6.0
 
 ENV PUFFER_WEB_PORT=8080
 
